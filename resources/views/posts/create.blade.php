@@ -21,14 +21,14 @@
             </div>
             </form> --}}
            
-            {{-- using laravelcollective --}}
+            {{-- using laravelcollective 'route' => 'posts.store' --}}
 
-            {!! Form::open(['route' => 'posts.store']) !!}
+            {!! Form::open(['action' => 'PostController@store']) !!}
                 {{ Form::label('title', 'Title:') }}
                 {{ Form::text('title', null, ['class'=> 'form-control'] ) }}
 
                 {{ Form::label('body', 'Post Body:') }}
-                {{ Form::textarea('title', null, ['class'=> 'form-control'] ) }}
+                {{ Form::textarea('body', null, ['class'=> 'form-control'] ) }}
 
                 {{ Form::submit('Create Project', ['class'=> 'btn btn-success btn-lg btn-block', 'style'=>'margin-top: 20px' ])}}
     
